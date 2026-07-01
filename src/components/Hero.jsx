@@ -1,8 +1,8 @@
-import "../styles//Hero.css";
+import "../styles/Hero.css";
 
 function Hero() {
   return (
-    <section className="hero">
+    <section className="hero" id="home">
       <div className="hero-overlay">
         <div className="hero-content">
           
@@ -13,8 +13,6 @@ function Hero() {
           <p className="desc">
             Discover amazing places, unique experiences and unforgettable journeys with our travel packages.
           </p>
-
-        
 
         </div>
       </div>

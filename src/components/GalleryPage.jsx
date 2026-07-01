@@ -3,6 +3,7 @@ import ClientGroupPhotos from "./ClientGroupPhotos";
 import TouristPlacesPhotos from "./TouristPlacesPhotos";
 import CustomerReviews from "./CustomerReviews";
 import "../styles/GalleryPage.css";
+import { HashLink } from "react-router-hash-link";
 
 function GalleryPage() {
 
@@ -10,6 +11,11 @@ function GalleryPage() {
 
   return (
     <div className="gallery-page">
+      <div className="home-btn-wrapper">
+  <HashLink smooth to="/#home" className="home-btn">
+    🏠 Home
+  </HashLink>
+</div>
 
       <div className="gallery-header">
         <p>EXPLORE OUR MEMORIES</p>

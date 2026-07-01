@@ -4,6 +4,7 @@ import "../styles/Navbar.css";
 function Navbar() {
   return (
     <header className="nav">
+
       <div className="logo-box">
         <img
           src={process.env.PUBLIC_URL + "/images/logo.jpg"}
@@ -14,6 +15,7 @@ function Navbar() {
       </div>
 
       <ul className="menu">
+
         <li>
           <HashLink smooth to="/#home">Home</HashLink>
         </li>
@@ -33,11 +35,13 @@ function Navbar() {
         <li>
           <HashLink smooth to="/#contact">Contact</HashLink>
         </li>
+
       </ul>
 
       <div className="phone">
         📞 +91 94832 39593
       </div>
+
     </header>
   );
 }
