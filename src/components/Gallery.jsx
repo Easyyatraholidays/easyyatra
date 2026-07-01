@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "../styles/Gallery.css";
 
 const images = [
@@ -23,13 +24,17 @@ function Gallery() {
       <h2>Beautiful Moments</h2>
 
       <div className="gallery-grid">
-
-        {images.map((img, i) => (
+        {images.slice(0, 6).map((img, i) => (
           <div className="gallery-item" key={i}>
             <img src={img} alt="travel" />
           </div>
         ))}
+      </div>
 
+      <div className="gallery-btn">
+        <Link to="/gallery-page">
+          <button>Explore Gallery</button>
+        </Link>
       </div>
 
     </section>

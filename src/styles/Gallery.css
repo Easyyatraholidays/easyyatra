@@ -37,3 +37,24 @@
 .gallery-item img:hover {
   transform: scale(1.1);
 }
+
+.gallery-btn {
+  margin-top: 40px;
+}
+
+.gallery-btn button {
+  background: #ff7a00;
+  color: white;
+  border: none;
+  padding: 14px 35px;
+  border-radius: 30px;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.gallery-btn button:hover {
+  background: #e56f00;
+  transform: translateY(-3px);
+}

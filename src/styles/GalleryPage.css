@@ -1,0 +1,109 @@
+.gallery-page {
+    padding: 80px 8%;
+    background: #f7f9fc;
+    min-height: 100vh;
+}
+
+.gallery-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.gallery-header p {
+    color: #ff7a00;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.gallery-header h1 {
+    font-size: 42px;
+    color: #1d3557;
+}
+
+.gallery-options {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+}
+
+.option-card {
+    width: 320px;
+    background: white;
+    border-radius: 18px;
+    padding: 35px 25px;
+    cursor: pointer;
+    transition: .35s;
+    box-shadow: 0 10px 25px rgba(0,0,0,.08);
+    text-align: center;
+}
+
+.option-card span {
+    font-size: 55px;
+}
+
+.option-card h3 {
+    margin-top: 18px;
+    margin-bottom: 15px;
+    color: #1d3557;
+}
+
+.option-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.option-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 35px rgba(0,0,0,.15);
+}
+
+.option-card.active {
+    background: linear-gradient(135deg,#ff7a00,#ff9d2f);
+    color: white;
+}
+
+.option-card.active h3,
+.option-card.active p {
+    color: white;
+}
+
+.gallery-content {
+    margin-top: 40px;
+}
+
+.coming-soon {
+    background: white;
+    border-radius: 18px;
+    padding: 60px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,.08);
+}
+
+.coming-soon h2 {
+    color: #1d3557;
+    margin-bottom: 20px;
+}
+
+.coming-soon p {
+    color: #666;
+    font-size: 18px;
+}
+
+@media(max-width:768px){
+
+.gallery-header h1{
+    font-size:32px;
+}
+
+.option-card{
+    width:100%;
+}
+
+.coming-soon{
+    padding:35px 20px;
+}
+
+}

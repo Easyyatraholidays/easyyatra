@@ -1,27 +1,35 @@
-
 import './App.css';
+import { Routes, Route } from "react-router-dom";
+
 import Hero from './components/Hero';
 import Navbar from './components/Navbar';
 import Destinations from './components/Destinations';
-
 import Footer from './components/Footer';
 import About from './components/About';
 import Gallery from './components/Gallery';
+import GalleryPage from './components/GalleryPage';
 import Backtotop from "./components/Backtotop";
 
-function App() {
-   return (
-    <div>
-       <Navbar />
+function Home() {
+  return (
+    <>
+      <Navbar />
       <Hero />
-      <About/>
-  
+      <About />
       <Destinations />
-      <Gallery/>
-      
+      <Gallery />
       <Footer />
-      <Backtotop/>
-    </div>
+      <Backtotop />
+    </>
+  );
+}
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/gallery-page" element={<GalleryPage />} />
+    </Routes>
   );
 }
 
