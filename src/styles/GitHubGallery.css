@@ -1,0 +1,298 @@
+/* ===========================
+   GALLERY TITLE
+=========================== */
+
+.gallery-title{
+    text-align:center;
+    font-size:34px;
+    color:#1d3557;
+    margin-bottom:35px;
+    font-weight:700;
+}
+
+/* ===========================
+   GALLERY GRID
+=========================== */
+
+.github-gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:22px;
+}
+
+.github-gallery-item{
+    height:240px;
+    overflow:hidden;
+    border-radius:15px;
+    cursor:pointer;
+    background:#fff;
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+    transition:.35s;
+}
+
+.github-gallery-item:hover{
+    transform:translateY(-6px);
+    box-shadow:0 20px 35px rgba(0,0,0,.18);
+}
+
+.github-gallery-item img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.45s;
+}
+
+.github-gallery-item:hover img{
+    transform:scale(1.08);
+}
+
+/* ===========================
+   REVIEW IMAGES
+=========================== */
+
+.review-item{
+    height:350px;
+    padding:10px;
+    background:white;
+}
+
+.review-item img{
+    object-fit:contain;
+}
+
+/* ===========================
+   LIGHTBOX
+=========================== */
+
+.lightbox{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.93);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:99999;
+    backdrop-filter:blur(6px);
+}
+
+.lightbox-image{
+    max-width:88%;
+    max-height:88%;
+    border-radius:15px;
+    box-shadow:0 15px 45px rgba(0,0,0,.45);
+    animation:zoom .35s ease;
+}
+
+/* ===========================
+   CLOSE BUTTON
+=========================== */
+
+.close-btn{
+    position:absolute;
+    top:20px;
+    right:20px;
+    width:52px;
+    height:52px;
+    border:none;
+    border-radius:50%;
+    background:rgba(255,255,255,.92);
+    color:#1d3557;
+    font-size:28px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+    z-index:10001;
+}
+
+.close-btn:hover{
+    background:#ff4d4d;
+    color:white;
+    transform:rotate(90deg);
+}
+
+/* ===========================
+   DOWNLOAD BUTTON
+=========================== */
+
+.download-btn{
+    position:absolute;
+    top:20px;
+    right:90px;
+    width:52px;
+    height:52px;
+    border-radius:50%;
+    background:rgba(255,255,255,.92);
+    color:#1d3557;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-decoration:none;
+    font-size:22px;
+    transition:.3s;
+    z-index:10001;
+}
+
+.download-btn:hover{
+    background:#ff7a00;
+    color:white;
+    transform:scale(1.1);
+}
+
+/* ===========================
+   IMAGE COUNTER
+=========================== */
+
+.counter{
+    position:absolute;
+    bottom:25px;
+    left:50%;
+    transform:translateX(-50%);
+    color:white;
+    font-size:18px;
+    font-weight:600;
+    background:rgba(0,0,0,.35);
+    padding:10px 20px;
+    border-radius:30px;
+}
+
+/* ===========================
+   PREVIOUS & NEXT BUTTONS
+=========================== */
+
+.lightbox-nav{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:60px;
+    height:60px;
+    border:none;
+    border-radius:50%;
+    background:rgba(255,255,255,.92);
+    color:#1d3557;
+    font-size:34px;
+    font-weight:bold;
+    cursor:pointer;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    transition:.3s;
+    z-index:10001;
+}
+
+.lightbox-nav:hover{
+    background:#ff7a00;
+    color:white;
+    transform:translateY(-50%) scale(1.12);
+}
+
+.prev{
+    left:30px;
+}
+
+.next{
+    right:30px;
+}
+
+/* ===========================
+   ANIMATION
+=========================== */
+
+@keyframes zoom{
+
+    from{
+        transform:scale(.82);
+        opacity:0;
+    }
+
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media(max-width:768px){
+
+.lightbox-nav{
+
+.github-gallery{
+    grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+}
+
+.github-gallery-item{
+    height:180px;
+}
+
+.review-item{
+    height:260px;
+}
+
+.gallery-title{
+    font-size:28px;
+}
+
+.lightbox-image{
+    max-width:95%;
+    max-height:80%;
+}
+}
+
+
+.download-btn{
+    top:18px;
+    right:75px;
+    padding:10px 14px;
+    font-size:14px;
+}
+
+.close-btn{
+    width:46px;
+    height:46px;
+    font-size:24px;
+}
+
+.counter{
+    bottom:18px;
+    font-size:15px;
+}
+
+}
+
+.pagination{
+    margin-top:40px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+.pagination button{
+    min-width:45px;
+    height:42px;
+    border:none;
+    border-radius:8px;
+    background:#f1f1f1;
+    cursor:pointer;
+    font-weight:600;
+    transition:.3s;
+}
+
+.pagination button:hover{
+    background:#ff7a00;
+    color:white;
+}
+
+.active-page{
+    background:#ff7a00 !important;
+    color:white;
+}
+
+.pagination button:disabled{
+    opacity:.5;
+    cursor:not-allowed;
+}

@@ -1,3 +1,4 @@
+import { HashLink } from "react-router-hash-link";
 import "../styles/Navbar.css";
 
 function Navbar() {
@@ -5,37 +6,34 @@ function Navbar() {
     <header className="nav">
 
       <div className="logo-box">
-
         <img
-  src={process.env.PUBLIC_URL + "/images/logo.jpg"}
-  alt="Easy Yatra Holidays"
-  className="logo-img"
-/>
-
+          src={process.env.PUBLIC_URL + "/images/logo.jpg"}
+          alt="Easy Yatra Holidays"
+          className="logo-img"
+        />
         <h2>Easy Yatra Holidays</h2>
-
       </div>
 
       <ul className="menu">
 
         <li>
-          <a href="#home">Home</a>
+          <HashLink smooth to="/#home">Home</HashLink>
         </li>
 
         <li>
-          <a href="#about">About Us</a>
+          <HashLink smooth to="/#about">About Us</HashLink>
         </li>
 
         <li>
-          <a href="#destination">Destination</a>
+          <HashLink smooth to="/#destination">Destination</HashLink>
         </li>
 
         <li>
-          <a href="#gallery">Gallery</a>
+          <HashLink smooth to="/#gallery">Gallery</HashLink>
         </li>
 
         <li>
-          <a href="#contact">Contact</a>
+          <HashLink smooth to="/#contact">Contact</HashLink>
         </li>
 
       </ul>
