@@ -1,5 +1,6 @@
 import "../styles/Footer.css";
 import { FaInstagram } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
 
 function Footer() {
   return (
@@ -17,7 +18,25 @@ function Footer() {
          
 
           <p>📧 easyyatraholidays@gmail.com</p>
+<a
+  href="https://instagram.com/easyyatraholidays"
+  target="_blank"
+  rel="noreferrer"
+  className="social-link"
+>
+ <FaInstagram className="insta-icon" />
 
+</a>
+
+<a
+  href="https://www.facebook.com/share/1E5Xhv1utf/"
+  target="_blank"
+  rel="noreferrer"
+  className="social-link"
+>
+ <FaFacebook className="fb-icon" />
+
+</a>
 
 
         </div>
@@ -25,7 +44,7 @@ function Footer() {
         {/* Team Section */}
         <div className="footer-section">
 
-          <h2>Meet the Team</h2>
+          <h2>FOUNDER</h2>
 
           <h3>Vishwas Pai</h3>
 
@@ -55,18 +74,7 @@ function Footer() {
             DM us for brochures or custom itineraries.
           </p>
 
-          <button className="footer-btn">
-            Contact Now
-          </button>
-<a
-  href="https://instagram.com/easyyatraholidays"
-  target="_blank"
-  rel="noreferrer"
-  className="social-link"
->
- <FaInstagram className="insta-icon" />
 
-</a>
         </div>
 
       </div>
